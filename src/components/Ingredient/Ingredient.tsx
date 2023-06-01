@@ -8,8 +8,8 @@ interface ICount {
     count: number,
     plusClick: (name: string) => void,
     minusClick: (name: string) => void,
-    deleteClick: (name: string) => void,
 }
+
 const Ingredient: React.FC<ICount> = props => {
 
     return (
@@ -21,7 +21,6 @@ const Ingredient: React.FC<ICount> = props => {
                     <span className="count">x{props.count}</span>
                     <button className="btn" onClick={() => props.minusClick(props.name)}>-1</button>
                     <button className="btn" onClick={() => props.plusClick(props.name)}>+1</button>
-                    <button className="btn" onClick={() => props.deleteClick(props.name)}>delete</button>
                 </div>
             </div>
         </div>
